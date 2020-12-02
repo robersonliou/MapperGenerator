@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<Version>0.0.1</Version>
+		<Authors>Roberson Liou</Authors>
+		<Description>A sample mapper created by source generator for .NET</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/robersonliou/MapperGenerator</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/robersonliou/MapperGenerator</RepositoryUrl>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.8.0" PrivateAssets="all" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.1" PrivateAssets="all" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Folder Include="Generators\" />
+	</ItemGroup>
+
+</Project>
