@@ -93,6 +93,8 @@ var vm1 = Mapper.MapToPersonViewModel(personEntity);
 var vm2 = personEntity.ToPersonViewModel();
 ```
 
+![demo](https://imgur.com/HhXtrkJ)
+
 ## Welcome to feedback
 
 Currently it's just a prototype mapper sample created by source generator, welcome to contribute or giving any sugesstion to me!
