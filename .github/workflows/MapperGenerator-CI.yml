@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    #- run: dotnet build MapperGenerator/MapperGenerator.csproj --configuration ${{ env.buildConfiguration }}
+    - run: dotnet build MapperGenerator/MapperGenerator.csproj --configuration ${{ env.buildConfiguration }}
     - run: dotnet pack MapperGenerator/MapperGenerator.csproj 
     
     # Publish
