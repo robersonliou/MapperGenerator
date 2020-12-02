@@ -92,8 +92,7 @@ var vm1 = Mapper.MapToPersonViewModel(personEntity);
 //extension method.
 var vm2 = personEntity.ToPersonViewModel();
 ```
-
-![demo](https://imgur.com/HhXtrkJ)
+[Imgur](https://imgur.com/HhXtrkJ)
 
 ## Welcome to feedback
 
