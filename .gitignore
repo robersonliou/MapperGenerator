@@ -5,3 +5,5 @@
 /MapperGenerator/.vs/MapperGenerator/v16
 /MapperGenerator/obj
 /MapperGenerator/MapperGenerator.sln
+/MapperGenerator/bin/Debug
+/MapperGenerator/MapperGenerator.csproj.user
