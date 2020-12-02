@@ -35,6 +35,8 @@ public class PersonViewModel
 }
 ```
 
+> For now we only support fully matched mapping, you need to define same type and naming of properties between two related classes.
+
 #### 2. Plug `MappingAttribute` to the mapping target.
 
 _PersonViewModel.cs_
