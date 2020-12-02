@@ -4,6 +4,15 @@
 
 A sample mapper using source generator for .NET
 
+## Nuget
+#### URL
+https://www.nuget.org/packages/MapperGenerator/
+
+#### Add package refernece to `.csproj`
+``` xml
+<PackageReference Include="MapperGenerator" Version="0.0.2" />
+```
+
 ## Getting Started
 
 #### 1. Prepare two classes for mapping. Here we create a `PersonEntity` and a `PersonViewModel`.
@@ -83,8 +92,6 @@ var vm1 = Mapper.MapToPersonViewModel(personEntity);
 //extension method.
 var vm2 = personEntity.ToPersonViewModel();
 ```
-
-
 
 ## Welcome to feedback
 
