@@ -4,7 +4,7 @@
 		<LangVersion>latest</LangVersion>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<IncludeBuildOutput>false</IncludeBuildOutput>
-		<Version>0.0.1</Version>
+		<Version>0.0.2</Version>
 		<Authors>Roberson Liou</Authors>
 		<Description>A sample mapper created by source generator for .NET</Description>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
