@@ -9,7 +9,7 @@ A sample mapper using source generator for .NET
 #### 1. Prepare two classes for mapping. Here we create a `PersonEntity` and a `PersonViewModel`.
 
 _PersonEntity.cs_
-```
+```csharp
 public class PersonEntity
 {
     public int Id { get; set; }
