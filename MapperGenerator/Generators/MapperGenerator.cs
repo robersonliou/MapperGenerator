@@ -98,6 +98,7 @@ namespace MapperGenerator
                 //should use same name and type of property
                 var targetPropertiesMatchedResult = targetClassProperties.Select(target => new {
                     TargetPropertyName = target.propertyName,
+                    TargetPropertySyntax = target.propertySyntax,
                     IsMatched = sourceClassProperties.Any(source =>
                         source.propertyName == target.propertyName &&
                         source.propertyType == target.propertyType)
@@ -106,8 +107,10 @@ namespace MapperGenerator
                 {
                     foreach (var target in targetPropertiesMatchedResult.Where(x => x.IsMatched == false))
                     {
-                        var diagnostic = Diagnostic.Create(new DiagnosticDescriptor("MPERR001", "Property mapping error",
-                            $"{targetClassName}.{target.TargetPropertyName} couldn't match to {sourceClassName}, please check if the name and type of properties are the same.", "source generator", DiagnosticSeverity.Error, true), Location.None);
+                        var diagnosticDescriptor = new DiagnosticDescriptor("MPERR001", "Property mapping error",
+                            $"{targetClassName}.{target.TargetPropertyName} couldn't match to {sourceClassName}, please check if the name and type of properties are the same.", "source generator", 
+                            DiagnosticSeverity.Error, true);
+                        var diagnostic = Diagnostic.Create(diagnosticDescriptor, target.TargetPropertySyntax.GetLocation());
                         context.ReportDiagnostic(diagnostic);                    
                     }
                     break;
@@ -122,7 +125,7 @@ namespace MapperGenerator
         {{
             var target = new {targetClassFullName}();");
 
-                foreach (var (_, propertyName) in targetClassProperties)
+                foreach (var (_, propertyName, _) in targetClassProperties)
                 {
                     sourceBuilder.Append(@$"
             target.{propertyName} = source.{propertyName};");
@@ -140,7 +143,7 @@ namespace MapperGenerator
         {{
             var target = new {targetClassFullName}();");
 
-                foreach (var (_, propertyName) in targetClassProperties)
+                foreach (var (_, propertyName, _) in targetClassProperties)
                 {
                     sourceBuilder.Append(@$"
             target.{propertyName} = source.{propertyName};");
