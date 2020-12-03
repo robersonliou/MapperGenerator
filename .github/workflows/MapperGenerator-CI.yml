@@ -14,7 +14,7 @@ env:
   buildConfiguration: Release
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
     - run: dotnet build MapperGenerator/MapperGenerator.csproj --configuration ${{ env.buildConfiguration }}
