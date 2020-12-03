@@ -8,3 +8,6 @@
 /MapperGenerator/bin/Debug
 /MapperGenerator/MapperGenerator.csproj.user
 /MapperGenerator/.vs/MapperGenerator/DesignTimeBuild
+/MapperGenerator/MapperGenerator.sln.DotSettings.user
+/MapperGenerator.Tests/bin/Debug/net5.0
+/MapperGenerator.Tests/obj
