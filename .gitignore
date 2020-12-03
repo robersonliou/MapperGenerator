@@ -5,9 +5,9 @@
 /MapperGenerator/.vs/MapperGenerator/v16
 /MapperGenerator/obj
 /MapperGenerator/MapperGenerator.sln
-/MapperGenerator/bin/Debug
+/MapperGenerator/bin
 /MapperGenerator/MapperGenerator.csproj.user
 /MapperGenerator/.vs/MapperGenerator/DesignTimeBuild
 /MapperGenerator/MapperGenerator.sln.DotSettings.user
-/MapperGenerator.Tests/bin/Debug/net5.0
+/MapperGenerator.Tests/bin/
 /MapperGenerator.Tests/obj
