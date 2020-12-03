@@ -14,7 +14,6 @@ namespace MapperGenerator.Generators
     [Generator]
     public class MapperGenerator : ISourceGenerator
     {
-        private const string NameSpace = "MapperGenerator";
         private const string MappingAttributeText = @"
 using System;
 namespace MapperGenerator
